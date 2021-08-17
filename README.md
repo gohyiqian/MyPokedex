@@ -1,14 +1,15 @@
-# My Pokedex
+# My PokeDex
 
-[Access the Landing Page Here](#)
+- First Run "nodemon server.js"
+- Then open (http://localhost:4000/poke) to view it on your browser
 
 ## Description
 
 Welcome to my PokeDex!
 
-## Gameplay
+## Short History of Pokemon
 
-Default per game duration is 30 seconds but will add 1 second for every correct words typed. You will start with three lives and a life will be deducted for every wrong words typed. The game ends when all 3 lives are deducted.
+The Pokémon franchise revolves around 898 fictional species of collectible monsters, each having unique designs, skills, and powers. Conceived by Satoshi Tajiri in early 1989, Pokémon are creatures that inhabit the fictional Pokémon World. Continue reading more at [wikipedia](https://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon)
 
 ## Built with
 
@@ -16,6 +17,14 @@ Default per game duration is 30 seconds but will add 1 second for every correct 
 - [Express](https://expressjs.com/) - Web Framework for Node.js
 - [NodeJS](https://nodejs.org/en/) - Server-side JavaScript
 
-## Game Page
+## Landing Page
 
-![Cover Image](#)
+![Cover Image](/img/cover.jpg)
+
+## Status Page
+
+![Cover Image](/img/status.jpg)
+
+## Create or Edit Page
+
+![Cover Image](/img/edit.jpg)
