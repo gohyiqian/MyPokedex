@@ -1,0 +1,63 @@
+<%- include("../partials/header.ejs") %>
+<body>
+    <div class ="album py-2 bg-warning bg-opacity-50 text-center"><strong> Pokemon</strong></div>
+    <div class="container">
+        <div class="row">
+            <div class="col py-4">   
+                <form action="/poke" method="POST">
+                    <label for="name"><strong>Pokemon ID:</strong></label> <br>
+                    <input type="text" name="id" id="id" placeholder="000" /> <br><br>
+                    <label for="name"><strong>Pokemon Name:</strong></label> <br>
+                    <input type="text" name="name" id="name" placeholder="anything creative" /> <br><br>
+                    <label for="type"><strong>Pokemon Type:</strong></label> <br>
+                    <select name="type" id="type">
+                        <option value="Bug">Bug</option>
+                        <option value="Electric">Electric</option>
+                        <option value="Fire">Fire</option>
+                        <option value="Flying">Flying</option>
+                        <option value="Fighting">Fighting</option>
+                        <option value="Grass">Grass</option>
+                        <option value="Ground">Ground</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Pyschic">Pyschic</option>
+                        <option value="Poison">Poison</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Water">Water</option>
+                      </select><br><br>
+                    <label for="type"><strong>Ability Status:</strong></label> <br>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="type"><strong>HP:</strong></label>
+                                <input type="integer" name="stats" id="hp" value="50"/>
+                                <label for="type"><strong>ATTACK:</strong></label>
+                                <input type="text" name="stats" id="attack" value="50"/>
+                                <label for="type"><strong>DEFENSE:</strong></label>
+                                <input type="text" name="stats" id="defense" value="50"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="type"><strong>SPATTACK:</strong></label>
+                                <input type="text" name="stats" id="spattack" value="50"/>
+                                <label for="type"><strong>SPDEFENSE:</strong></label>
+                                <input type="text" name="stats" id="spdefense" value="50"/>
+                                <label for="type"><strong>SPEED:</strong></label>
+                                <input type="text" name="stats" id="speed" value="50"/>
+                            </td>
+                        </tr>
+                    </table>
+                        <br>
+                    <label for="img" class="form-label"><strong>Pokemon Image:</strong></label>
+                    <input type="file" name="featuredImage" class="form-control" accept="image/*"/> <br>
+                    <input type="submit" class="btn btn-secondary my-2" value="Create Pokemon" />
+                </form>
+            </div>
+        </div>
+        <a href="/poke" class="btn btn-warning my-2">Back to Index</a>
+    </div>  
+
+    </div>
+</body>
+
+</html>

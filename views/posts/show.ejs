@@ -1,0 +1,36 @@
+<%- include("../partials/header.ejs") %>
+<body>
+    <div class ="album py-2 bg-warning bg-opacity-50 text-center"><strong> Pokemon ID: #<%= data.id %></strong></div>
+        <div class="container">
+            <div class="row">
+                <div class="col py-4">
+                    <h1><%= data.name %></h1>
+                        <p>
+                            The <%= data.name %> is <%= data.type %> type.
+                        </p>
+                            <table>
+                                <tr class="bg-warning bg-opacity-50 text-center">
+                                    <th>ABILITY</th>
+                                    <th>STATISTICS</th>
+                                </tr>
+                                <tr class="text-uppercase">
+                                    <% for(let i=0;i<Object.values(data.stats).length;i++){ %>
+                                        <tr>
+                                            <td><strong><%= Object.keys(data.stats)[i].toUpperCase() %></strong></td>
+                                            <td style="font-family:monospace;"><strong><%= Object.values(data.stats)[i] %></strong></td>
+                                        </tr>                                 
+                                    <% }; %>
+                                </tr>
+                            </table>
+                </div>
+                <div class="col py-5">
+                    <img src="<%= data.img %>" height=400 width=400></img>
+                </div>
+            </div>
+            <a href="/poke" class="btn btn-secondary my-2">Back to Index</a>
+            <a href="/poke/<%=index%>/edit" class="btn btn-warning my-2">Edit Pokemon</a>
+        </div>
+    </div>
+</body>
+
+</html>

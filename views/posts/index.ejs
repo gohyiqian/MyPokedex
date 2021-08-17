@@ -1,0 +1,37 @@
+<%- include("../partials/header.ejs") %>
+<div class ="album py-5 bg-warning bg-opacity-50">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+          <% data.forEach((ele, index) => { %>
+          <div class="col animating" style="opacity: 1; top: 0px; left: 0px; transform: matrix(1, 0, 0, 1, 0, 0);">
+            <div class="card shadow-lg">
+              <svg width="100%" height="50" role="img"><img src="<%= ele.img %>" class="center" height=180><text class="text"><%= ele.name %></text></img></svg>
+                <div class="card-body">
+                  <p class="card-text"><%= ele.name %> is a <%= ele.type%> Pokemon. Will be adding more description here in future. Please stay tuned for it!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <a href="/poke/<%=index%>" class="btn btn-secondary my-2">Status</a>                   
+                      <!-- Delete Pokemon -->
+                      <form action="/poke/<%=index%>?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-warning my-2" value="DELETE"/>Remove</button>
+                      </form>
+                    </div>
+                    <medium class="text-muted">#<%= ele.id %></medium>
+                  </div>
+                </div>
+            </div>
+          </div>
+        <% }) %>
+        </div>
+    </div>
+  </main>
+  <!-- <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" href="poke">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="poke?page=1&limit=8">Next</a></li>
+    </ul>
+  </nav> -->
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>
